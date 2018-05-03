@@ -1,5 +1,5 @@
 {
-  "name": "votePOI",
+  "name": "votepoi",
   "description": "Character voting app for Person of Interest",
   "version": "0.0.1",
   "repository": {
@@ -21,6 +21,7 @@
     "express": "^4.13.1",
     "mongoose": "^4.0.7",
     "morgan": "^1.6.1",
+    "nodemon": "^1.17.3",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "request": "^2.58.0",

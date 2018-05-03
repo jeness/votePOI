@@ -11,6 +11,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/',(req,res)=>res.send('Hello World!'))
+
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
