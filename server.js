@@ -1,3 +1,6 @@
+var mongoose = require('mongoose');
+var Character = require('./models/character');
+var config = require('./config');
 var swig  = require('swig');
 var React = require('react');
 var Router = require('react-router');
@@ -8,6 +11,11 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 
 var app = express();
+
+mongoose.connect(config.database);
+mongoose.connection.on('error', function() {
+  console.info('Error: Could not connect to MongoDB. Did you forget to run `mongod`?');
+});s
 
 app.set('port', process.env.PORT || 3000);
 app.use(logger('dev'));
