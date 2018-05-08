@@ -1,6 +1,6 @@
 import React from 'react';
 import CharacterStore from '../stores/CharacterStore';
-import CharacterActions from '../actions/CharacterActions';
+import CharacterActions from '../actions/CharacterActions'
 
 class Character extends React.Component {
   constructor(props) {
@@ -31,7 +31,6 @@ class Character extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    // Fetch new charachter data when URL path changes
     if (prevProps.params.id !== this.props.params.id) {
       CharacterActions.getCharacter(this.props.params.id);
     }
@@ -45,7 +44,7 @@ class Character extends React.Component {
     return (
       <div className='container'>
         <div className='profile-img'>
-          <a className='magnific-popup' href={'https://image.eveonline.com/Character/' + this.state.characterId + '_1024.jpg'}>
+          <a ref='magnificPopup' className='magnific-popup' href={'https://image.eveonline.com/Character/' + this.state.characterId + '_1024.jpg'}>
             <img src={'https://image.eveonline.com/Character/' + this.state.characterId + '_256.jpg'} />
           </a>
         </div>
@@ -71,9 +70,5 @@ class Character extends React.Component {
     );
   }
 }
-
-Character.contextTypes = {
-  router: React.PropTypes.func.isRequired
-};
 
 export default Character;
