@@ -27,7 +27,7 @@ npm install --save-dev gulp@next //run at the level of dir as same as package.js
 npm install -g bower
 ```
 
-## Usage
+## Usage - on local environment
 + terminal 1 - run mongodb
 ```
 mongod
@@ -39,4 +39,12 @@ gulp
 + terminal 3
 ```
 npm run watch
+```
+## Deployment on heroku
+Follow the instructions on heroku to add a new application
+```
+heroku login
+git add .
+git commit -am "make it better"
+git push heroku master
 ```
