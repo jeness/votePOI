@@ -1,4 +1,4 @@
-# A role voting app project by node.js, MongoDB and React
+# A role voting app project by node.js, MongoDB and React.js
 
 ## Dependencies
 1. Install homebrew and nodejs
@@ -48,3 +48,5 @@ git add .
 git commit -am "make it better"
 git push heroku master
 ```
+Demo link:<br> 
+[project demo](https://voterole.herokuapp.com/)
